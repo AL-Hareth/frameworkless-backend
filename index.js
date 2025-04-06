@@ -4,6 +4,9 @@ import Users from "./routes/users.js";
 import { initDatabase } from "./lib/db.js";
 import { withBodyParser } from "./lib/bodyParser.js";
 import { checkAuth } from "./lib/authMiddleware.js";
+import { loadEnvFile } from "node:process";
+
+loadEnvFile();
 
 const hostname = '127.0.0.1';
 const port = 3000;
